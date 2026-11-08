@@ -130,7 +130,9 @@ h2 { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(36px, 4.7vw
 .experience-main h3 { font-size: 27px; }
 .experience-main > p:not(.experience-kicker) { margin: 12px 0; color: var(--ink-soft); font-size: 13px; line-height: 1.9; }
 .experience-footnote { color: var(--muted); font-size: 10px; }
-.experience-arrow { position: absolute; top: 30px; right: 30px; color: var(--accent); font-size: 17px; }
+.experience-arrow { position: absolute; top: 30px; right: 30px; color: var(--accent); font-size: 17px; text-decoration: none; transition: transform .2s ease; }
+.experience-arrow:hover { transform: translate(2px, -2px); }
+.experience-arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .skill-group { min-height: 180px; padding: 27px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -141,12 +143,15 @@ h2 { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(36px, 4.7vw
 .education-section { padding-top: 90px; padding-bottom: 90px; }
 .education-line { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
 .education-line h2 { max-width: 450px; font-size: clamp(32px, 4vw, 46px); }
-.education-detail { display: flex; align-items: center; gap: 20px; padding-left: 28px; border-left: 1px solid var(--line); }
+.education-list { display: grid; gap: 0; padding-left: 28px; border-left: 1px solid var(--line); }
+.education-item { display: flex; align-items: center; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.education-item:first-child { padding-top: 0; }
+.education-item:last-child { padding-bottom: 0; border-bottom: 0; }
 .education-logo { display: block; flex: 0 0 76px; width: 76px; height: 76px; object-fit: contain; }
 .education-copy { min-width: 0; }
-.education-detail h3 { margin: 0; font-family: "Manrope", sans-serif; font-size: 19px; letter-spacing: -.04em; }
-.education-detail p { margin: 5px 0; color: var(--ink-soft); font-size: 13px; }
-.education-detail span { color: var(--muted); font-size: 11px; }
+.education-item h3 { margin: 0; font-family: "Manrope", sans-serif; font-size: 19px; letter-spacing: -.04em; }
+.education-item p { margin: 5px 0; color: var(--ink-soft); font-size: 13px; }
+.education-item span { color: var(--muted); font-size: 11px; }
 
 .contact-section { background: #171916; color: #f4f5ef; }
 .contact-inner { padding-top: 105px; padding-bottom: 42px; }
@@ -231,7 +236,9 @@ h2 { margin: 0; font-family: "Manrope", sans-serif; font-size: clamp(36px, 4.7vw
   .skill-group { min-height: 150px; padding: 24px; }
   .education-section { padding-top: 72px; padding-bottom: 72px; }
   .education-line { grid-template-columns: 1fr; gap: 27px; }
-  .education-detail { gap: 16px; padding-left: 18px; }
+  .education-list { padding-left: 18px; }
+  .education-item { gap: 16px; }
+  .education-logo { flex-basis: 64px; width: 64px; height: 64px; }
   .contact-inner { padding-top: 78px; padding-bottom: 28px; }
   .contact-inner h2 { font-size: 59px; }
   .contact-bottom { align-items: flex-start; flex-direction: column; margin-top: 75px; }
